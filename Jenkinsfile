@@ -23,8 +23,8 @@ pipeline {
 
             }
         }
-    
-        stage('install dependencies') {
+
+        stage('Install dependencies') {
             steps {
                 script {
                     sh """
