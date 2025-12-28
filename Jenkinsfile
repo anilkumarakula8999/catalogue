@@ -17,19 +17,18 @@ pipeline {
                     
                     def packagejson = readJSON file: 'package.json'
                     appversion = packagejson.version
-                    echo "App Version i: ${appversion}"
+                    echo "App Version : ${appversion}"
                    
                 }
 
             }
         }
     
-        stage('Test') {
+        stage('install dependencies') {
             steps {
                 script {
                     sh """
-                        echo "Testing"
-                        echo $COURSE
+                        npm install
                     """
                 }
             
