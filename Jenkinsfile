@@ -10,7 +10,7 @@ pipeline {
         COURSE = "jenkins"
         appversion = ""
         ACC_ID = "193685726527"
-        PROJECT = "ROBOSHOP"
+        PROJECT = "roboshop"
         COMPONENT = "catalogue"
     }
     options {
