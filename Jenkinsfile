@@ -42,6 +42,17 @@ pipeline {
             
             }
         }
+        // unit tests are developed to test individual units or components of a software application to ensure that each part functions correctly in isolation.done by developers
+        stage('Unit Tests') {
+            steps {
+                script {
+                    sh """
+                       npm test
+                    """
+                }
+            
+            }
+        }
         stage('Build Image') {
             steps {
                 script {
