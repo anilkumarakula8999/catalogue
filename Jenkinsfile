@@ -52,9 +52,9 @@ pipeline {
             }
         }
 
-       
+    } 
 //   #post build 
-    post{
+    post {
         always{
               echo 'i will say always hello again'
               cleanWs() 
@@ -70,4 +70,4 @@ pipeline {
         }
     }
 }
-// end of pipeline line no 79
+
