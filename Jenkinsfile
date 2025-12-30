@@ -1,6 +1,11 @@
 // pre-build section
 pipeline {
-    agent any 
+    // These are pre-build sections
+    agent {
+        node {
+            label 'AGENT-1'
+        }
+    }
     environment {
         COURSE = "jenkins"
         appversion = ""
@@ -31,9 +36,6 @@ pipeline {
             steps {
                 script {
                     sh """
-                       dnf module disable nodejs -y
-                       dnf module enable nodejs:20 -y
-                       dnf install nodejs -y
                        npm install
                     """
                 }
